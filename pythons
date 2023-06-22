@@ -1,0 +1,58 @@
+import matplotlib.pyplot as plt
+import networkx as nx
+
+# Crear el grafo
+G = nx.DiGraph()
+
+# Agregar nodos
+G.add_node("Violencia Física")
+G.add_node("Agresión física")
+G.add_node("Violencia verbal")
+G.add_node("Violencia psicológica")
+G.add_node("Violencia doméstica")
+G.add_node("Violencia laboral")
+G.add_node("Violencia política")
+G.add_node("Violencia de género")
+G.add_node("Violencia escolar")
+G.add_node("Violencia en el noviazgo")
+G.add_node("Violencia en el trabajo")
+G.add_node("Violencia racial")
+G.add_node("Violencia religiosa")
+G.add_node("Violencia económica")
+G.add_node("Violencia institucional")
+G.add_node("Violencia cibernética")
+G.add_node("Violencia simbólica")
+G.add_node("Violencia cultural")
+
+# Agregar relaciones
+G.add_edge("violencia", "Tipos de violencia")
+G.add_edge("violencia", "Tipos de violencia")
+G.add_edge("Tipos de violencia", "Violencia Física")
+G.add_edge("Tipos de violencia", "Agresión física")
+G.add_edge("Tipos de violencia", "Violencia verbal")
+G.add_edge("Tipos de violencia", "Violencia psicológica")
+G.add_edge("Tipos de violencia", "Violencia doméstica")
+G.add_edge("Tipos de violencia", "Violencia laboral")
+G.add_edge("Tipos de violencia", "Violencia política")
+G.add_edge("Tipos de violencia", "Violencia de género")
+G.add_edge("Tipos de violencia", "Violencia escolar")
+G.add_edge("Tipos de violencia", "Violencia en el noviazgo")
+G.add_edge("Tipos de violencia", "Violencia en el trabajo")
+G.add_edge("Tipos de violencia", "Violencia racial")
+G.add_edge("Tipos de violencia", "Violencia religiosa")
+G.add_edge("Tipos de violencia", "Violencia económica")
+G.add_edge("Tipos de violencia", "Violencia institucional")
+G.add_edge("Tipos de violencia", "Violencia cibernética")
+G.add_edge("Tipos de violencia", "Violencia simbólica")
+G.add_edge("Tipos de violencia", "Violencia cultural")
+
+
+# Configurar el layout del grafo
+pos = nx.spring_layout(G)
+
+# Dibujar el grafo
+nx.draw_networkx(G, pos, with_labels=True, node_size=1000, font_size=10, node_color='lightblue', arrowsize=20, arrowstyle='->')
+
+# Mostrar el grafo
+plt.axis('off')
+plt.show()
